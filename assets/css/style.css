@@ -164,7 +164,7 @@ form button.btn-primary:hover {
     1 - Hero
 ------------------------------------*/
 .hero {
-  background: url("../images/hero-bg.jpg") no-repeat center;
+  background: url("../../img/Banner.jpg") no-repeat center;
   background-size: cover;
   overflow: hidden;
   position: relative;
@@ -177,7 +177,7 @@ form button.btn-primary:hover {
 }
 
 .hero .slide-content {
-  min-height: 600px;
+  min-height: 450px;
   color: #fff;
 }
 
@@ -198,7 +198,7 @@ form button.btn-primary:hover {
   color: #170936;
   -webkit-transform: matrix(0.93128, 0, 0, 0.93128, 0, 0);
           transform: matrix(0.93128, 0, 0, 0.93128, 0, 0);
-  padding: 35px 0 35px 30px;
+  padding: 35px 20px 35px 30px;
   background-color: rgba(255, 255, 255, 0.51);
   border-top-right-radius: 100px;
   border-bottom-left-radius: 10px;
@@ -387,6 +387,7 @@ form button.btn-primary:hover {
   position: absolute;
   bottom: 0;
   right: 0;
+  max-width: 100%;
 }
 
 .featured-small {
@@ -395,6 +396,7 @@ form button.btn-primary:hover {
   left: 0;
   padding: 25px 25px 0 0;
   background-color: #fff;
+  max-width: 50%;
 }
 
 /*-----------------------------------
