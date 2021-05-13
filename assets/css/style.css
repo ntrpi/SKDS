@@ -657,13 +657,12 @@ form button.btn-primary:hover {
     1 - Testimonials
 ------------------------------------*/
 .testimonial-and-clients {
-  background: url(../images/test-clients-bg.png) center center/cover no-repeat #da208d;
+  background: url(../../img/imageedit_2_5094971619.png) center center/cover no-repeat #da208d;
 }
 
 .testimonials {
-  padding: 95px 0 85px;
+  padding: 95px 0 45px;
   color: #fff;
-  border-bottom: 1px solid #26264b;
 }
 
 .testimonials .test-img {
@@ -695,6 +694,8 @@ form button.btn-primary:hover {
 .testimonials p {
   font-size: 17px;
   line-height: 27px;
+  border-bottom: 1px solid #26264b;
+  padding-bottom: 3rem;
 }
 
 .test-pagination {
