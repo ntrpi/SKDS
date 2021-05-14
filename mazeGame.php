@@ -25,54 +25,54 @@
     <!-- Call To Action End -->
 
     <section id="mazeSection" class="maze pageWrapper">
-      <h2>Chase the Cheese</h2>
-      <div id="mazeDiv">
-        <div id="mazeDiv" class="mazeDiv">
-          <img id="cheese1" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
-          <img id="cheese2" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
-          <img id="cheese3" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
-          <img id="mouse" class="mouse" src="./img/mazeGame/mouse.png" alt="Mouse clip art." height="38">
-          <div>
-            <table id="maze"></table>
-          </div>
-        </div>
-        <div id="buttonsDiv">
-          <!-- <button id="utilitity">utilitity</button> -->
-          <div id="movesDiv">
-            <div class="upDownBtns">
-              <button class="recurse upBtn"><span class="arrowBtn up"></span></button>
-              <button class="recurse arrowBtn bottom up upBtn"></button>
-              <button class="upBtn"><span class="arrowBtn up"></span></button>
+        <h2>Chase the Cheese</h2>
+        <div id="mazeDiv">
+            <div id="mazeDiv" class="mazeDiv">
+            <img id="cheese1" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
+            <img id="cheese2" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
+            <img id="cheese3" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
+            <img id="mouse" class="mouse" src="./img/mazeGame/mouse.png" alt="Mouse clip art." height="38">
+            <div>
+                <table id="maze"></table>
             </div>
-            <div class="centerRow">
-              <div class="leftRightBtns">
-                <div class="leftRightBtns">
-                    <button class="recurse leftBtn"><span class="arrowBtn left"></span></button>
-                    <button class="recurse arrowBtn left leftBtn2"></button>
-                <!-- </div>
-                <div class="leftRightBtns"> -->
-                    <button class="leftBtn"><span class="arrowBtn left"></span></button>
-                    <button class="arrowBtn center"></button>
-                    <button class="rightBtn"><span class="arrowBtn right"></span></button>
-                <!-- </div>
-                <div class="leftRightBtns"> -->
-                    <button class="recurse arrowBtn right rightBtn2"></button>
-                    <button class="recurse rightBtn"><span class="arrowBtn right"></span></button>
+            </div>
+            <div id="buttonsDiv">
+            <!-- <button id="utilitity">utilitity</button> -->
+            <div id="movesDiv">
+                <div class="upDownBtns">
+                <button class="recurse upBtn"><span class="arrowBtn up"></span></button>
+                <button class="recurse arrowBtn bottom up upBtn"></button>
+                <button class="upBtn"><span class="arrowBtn up"></span></button>
                 </div>
-              </div>
+                <div class="centerRow">
+                <div class="leftRightBtns">
+                    <div class="leftRightBtns">
+                        <button class="recurse leftBtn"><span class="arrowBtn left"></span></button>
+                        <button class="recurse arrowBtn left leftBtn2"></button>
+                    <!-- </div>
+                    <div class="leftRightBtns"> -->
+                        <button class="leftBtn"><span class="arrowBtn left"></span></button>
+                        <button class="arrowBtn center"></button>
+                        <button class="rightBtn"><span class="arrowBtn right"></span></button>
+                    <!-- </div>
+                    <div class="leftRightBtns"> -->
+                        <button class="recurse arrowBtn right rightBtn2"></button>
+                        <button class="recurse rightBtn"><span class="arrowBtn right"></span></button>
+                    </div>
+                </div>
+                </div>
+                <div class="upDownBtns">
+                    <button class="downBtn"><span class="arrowBtn down"></span></button>
+                    <button class="recurse arrowBtn top down downBtn"></button>
+                    <button class="recurse downBtn"><span class="arrowBtn down"></span></button>
+                </div>
+                <div class="message" id="message"></div>
             </div>
-            <div class="upDownBtns">
-                <button class="downBtn"><span class="arrowBtn down"></span></button>
-                <button class="recurse arrowBtn top down downBtn"></button>
-                <button class="recurse downBtn"><span class="arrowBtn down"></span></button>
+            <div>
+                <input type="button" name="restart" id="restart" value="New Maze">
             </div>
-            <div class="message" id="message"></div>
-          </div>
-          <div>
-            <input type="button" name="restart" id="restart" value="New Maze">
-          </div>
+            </div>
         </div>
-      </div>
     </section>
 
 

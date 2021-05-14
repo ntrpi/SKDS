@@ -26,11 +26,13 @@ body {
     color: rgb(253, 176, 87);
     letter-spacing: 4px;
     text-transform: uppercase;
+    padding-top: 3rem;
 }
 
 #mazeSection {
-    margin: 3rem 1em;
+    margin: 3rem auto;
     text-align: center;
+    border: 3px solid rgb(253, 176, 87);
 }
 
 .hidden {
@@ -111,6 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-right: 2rem;
 }
 
 #movesDiv {
