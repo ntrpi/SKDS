@@ -1,6 +1,6 @@
 <?php
 
-namespace php\utl
+namespace skds\php\utl
 {
     require_once "utl.php";
 

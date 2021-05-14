@@ -1,6 +1,6 @@
 <?php
 
-namespace php\utl
+namespace skds\php\utl
 {
     class MySqlHelper 
     {        
@@ -109,6 +109,11 @@ namespace php\utl
             $param = new \stdClass();
             $param->$key = $value;
             return $param;
+        }
+
+        public function getPrimaryKeyParam( $value )
+        {
+            return self::getParam( $this->primaryKeyName, $value );
         }
     }
 

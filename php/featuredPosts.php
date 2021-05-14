@@ -1,91 +1,78 @@
 <?php
 
-use php\utl\{DB,MSql};
-require_once "utl/Database.php";
-require_once "utl/MySqlHelper.php";
+use skds\php\Models\{FeaturedPost, Post, PostImage};
+require_once "Models/FeaturedPost.php";
+require_once "Models/Post.php";
+require_once "Models/PostImage.php";
 
-$mysqlHelper = new MSql( "featuredPosts", "featuredPostId" );
-$sql = $mysqlHelper->getFindWhereSql( "postId" );
-$params = MSql::getParam( "postId", "1" );
+$dbHelper = new FeaturedPost();
+$featuredPosts = $dbHelper->getFeaturedPosts();
 
-$featuredPosts = DB::getDbResultWithParams( $sql, $params );
-var_dump( $featuredPosts );
+function getTextDiv( $isRight, $title, $description, $link )
+{
+    $textRightClass = $isRight ? " text-sm-right" : "";
 
+    $div = '<div class="post-content' . $textRightClass . '">';
+    $div .= '<h3><a href="' . $link . '">' . $title . '</a></h3>';
+    $div .= '<p><a href="' . $link . '">' . $description . '</a></p>';
+    $div .= '<a class="post-btn" href="' . $link . '"><i class="fa fa-arrow-right"></i></a>';
+    $div .= '</div>';
+    return $div;
+}
 
+function getImageDiv( $image, $altText )
+{
+    $div = '<div class="post-thumb">';
+    $div .= '<img class="img-fluid" src="' . $image . '" alt="' . $altText . '">';
+    $div .= '</div>';
+    return $div;
+}
 
-$title = "";
-$description = "";
-$tags = "";
-$link = "";
-$image = "";
+$counter = 0;
+$postDivs = array();
+$postHelper = new Post();
+$postImageHelper = new PostImage();
+foreach( $featuredPosts as $fPost ) {
 
+    $postId = $fPost->postId;
+    $post = $postHelper->getPost( $postId );
 
+    $postImageId = $fPost->postImageId;
+    $postImage = $postImageHelper->getPostImage( $postImageId );
 
+    $isRight = $counter % 2 == 0;
+    $fadeDirection = $isRight ? "right" : "left";
+
+    $dataOasDelay = $counter > 1 ? ' data-aos-delay"200" ' : "";
+
+    $div = '
+        <div class="col-lg-6">
+            <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-' . $fadeDirection . '"' . $dataOasDelay . ' data-aos-duration="800" >';
+    if( $isRight ) {
+        $div .= getTextDiv( $isRight, $post->title, $post->description, $fPost->link );
+        $div .= getImageDiv( '../' . $postImage->image, $postImage->altText );
+    } else {
+        $div .= getImageDiv( '../' . $postImage->image, $postImage->altText );
+        $div .= getTextDiv( $isRight, $post->title, $post->description, $fPost->link );
+    }
+    $div .= '</div></div>';
+    array_push( $postDivs, $div );
+
+    $counter++;
+}
 ?>
 
 
 <!-- Recent Posts Start -->
-    <section class="recent-posts">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-right" data-aos-duration="800">
-                        <div class="post-content text-sm-right">
-                            <time datetime="2019-04-06T13:53">15 Oct, 2019</time>
-                            <h3><a href="#">Proudly for us to build stylish</a></h3>
-                            <p><a href="#">Seanding</a>, <a href="#">Website</a>, <a href="#">E-commerce</a></p>
-                            <a class="post-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                        <div class="post-thumb">
-                            <img class="img-fluid" src="assets/images/post1.jpg" alt="Post 1">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-left" data-aos-duration="800">
-                        <div class="post-thumb">
-                            <img class="img-fluid" src="assets/images/post2.jpg" alt="Post 1">
-                        </div>
-                        <div class="post-content">
-                            <time datetime="2019-04-06T13:53">15 Oct, 2019</time>
-                            <h3><a href="#">Remind me to water the plants</a></h3>
-                            <p><a href="#">Seanding</a>, <a href="#">Website</a>, <a href="#">E-commerce</a></p>
-                            <a class="post-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-right" data-aos-delay="200"
-                        data-aos-duration="800">
-                        <div class="post-content text-sm-right">
-                            <time datetime="2019-04-06T13:53">15 Oct, 2019</time>
-                            <h3><a href="#">Add apples to the grocery list</a></h3>
-                            <p><a href="#">Seanding</a>, <a href="#">Website</a>, <a href="#">E-commerce</a></p>
-                            <a class="post-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                        <div class="post-thumb">
-                            <img class="img-fluid" src="assets/images/post3.jpg" alt="Post 1">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="single-rpost d-sm-flex align-items-center" data-aos="fade-left" data-aos-delay="200"
-                        data-aos-duration="800">
-                        <div class="post-thumb">
-                            <img class="img-fluid" src="assets/images/post4.jpg" alt="Post 1">
-                        </div>
-                        <div class="post-content">
-                            <time datetime="2019-04-06T13:53">15 Oct, 2019</time>
-                            <h3><a href="#">Make it warmer downstairs</a></h3>
-                            <p><a href="#">Seanding</a>, <a href="#">Website</a>, <a href="#">E-commerce</a></p>
-                            <a class="post-btn" href="#"><i class="fa fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="text-center">
-                <a href="#" class="btn btn-primary">See More</a>
-            </div>
+<section class="recent-posts">
+    <div class="container">
+        <div class="row">
+            <?php
+                foreach( $postDivs as $div ) {
+                    echo $div;
+                }
+            ?>
         </div>
-    </section>
-    <!-- Recent Posts End -->
+    </div>
+</section>
+<!-- Recent Posts End -->

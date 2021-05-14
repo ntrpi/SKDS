@@ -1,6 +1,6 @@
 <?php
 
-namespace php\utl;
+namespace skds\php\utl;
 {
     require_once "utl.php";
 
@@ -92,7 +92,7 @@ namespace php\utl;
         }
 
         // Syntactic sugar to bind the key/value pairs in $params, 
-        // execute some SQL, and return the array of rows retrieved from the database.
+        // execute some SQL, and return the array of row objects retrieved from the database.
         public static function getDbResultWithParams( $sql, $params )
         {
             $pdoResult = self::runSqlWithParams( $sql, $params );
