@@ -160,7 +160,7 @@
   .hero .arr-right {
     top: 50%;
   }
-  .title h1 {
+  .title h1,h2 {
     font-size: 48px;
   }
 
@@ -173,7 +173,7 @@
   .navbar-brand img {
     width: auto;
   }
-  .title h1 {
+  .title h1,h2 {
     font-size: 58px;
   }
   .trust .title {

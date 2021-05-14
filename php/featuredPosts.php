@@ -67,7 +67,7 @@ foreach( $featuredPosts as $fPost ) {
 <section class="recent-posts">
     <div class="container">
         <div class="title text-center">
-            <h2 class="h2 title-blue">Projects</h2>
+            <h2 class="title-blue">Projects</h2>
         </div>
         <div class="container">
             <div class="row">
