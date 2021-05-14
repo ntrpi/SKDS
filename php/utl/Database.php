@@ -10,27 +10,39 @@ namespace php\utl;
         private static $database = "skdssite_site";
         private static $userName = "skdssite_me";
         private static $password = "Ent1!ropy";
+
+        private static $dbPdo;
     
         // Static class.
         private function __construct()
         {        
         }
 
-        public static function connectToDb()
+        // Construct the PDO if required, then return PDO.
+        public static function getPdo()
         {
-            $dataSource = "mysql:host=" . self::$host . ";dbname=" . self::$database;
-            try {
-                $conn = new \PDO( $dataSource, self::$userName, self::$password );
+            if( self::$dbPdo == null ) {
+    
+                try {
+                    // Establish the connection.
+                    $dataSource = "mysql:host=" . self::$host . ";dbname=" . self::$database;
+                    self::$dbPdo = new \PDO( $dataSource, self::$userName, self::$password );
 
-                // set the PDO error mode to exception
-                $conn->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
+                    cl( "DB connected" );
 
-                echo "Connected successfully" . "</br>";
-                cl( "connected" );
-            } catch( \PDOException $e) {
-                echo "Connection failed: " . $e->getMessage();
+                } catch( \PDOException $e ) {
+                    cl( $e->getMessage() );
+                    wl( $e->getMessage() );
+                    exit();
+                }
+
+                // Set some connection attributes.
+                self::$dbPdo->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
             }
+
+            return self::$dbPdo;
         }
+
     }
 }
 ?> 
@@ -53,7 +65,7 @@ namespace php\utl;
 
 //         // Private variables to interact with the database.
 //         private static $dataSourceName;
-//         private static $dataPdo;
+//         private static $dbPdo;
     
 //         // Static class.
 //         private function __construct()
@@ -63,12 +75,12 @@ namespace php\utl;
 //         // Construct the PDO if required, then return PDO.
 //         private static function getPdo()
 //         {
-//             if( self::$dataPdo == null ) {
+//             if( self::$dbPdo == null ) {
 //                 self::$dataSourceName  = "mysql:host=" .self::$host . ";dbname=" . self::$dbName;
     
 //                 try {
 //                 // Establish the connection.
-//                 self::$dataPdo = new \PDO( self::$dataSourceName, self::$userName, self::$password );
+//                 self::$dbPdo = new \PDO( self::$dataSourceName, self::$userName, self::$password );
         
 //                 } catch( PDOException $e ) {
 //                     echo $e->getMessage()();
@@ -76,17 +88,17 @@ namespace php\utl;
 //                 }
 
 //                 // Set some connection attributes.
-//                 self::$dataPdo->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
+//                 self::$dbPdo->setAttribute( \PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION );
 //             }
-//             return self::$dataPdo;
+//             return self::$dbPdo;
 //         }
 
 //         // Use the PDO to run the provided SQL string. Return the PDO statement that was run.
 //         public static function runSql( $sql )
 //         {
 //             // echo $sql;
-//             $dataPdo = self::getPdo();
-//             $pdoStatement = $dataPdo->prepare( $sql );
+//             $dbPdo = self::getPdo();
+//             $pdoStatement = $dbPdo->prepare( $sql );
 //             $pdoStatement->execute();
 //             // $pdoStatement->debugDumpParams();
     
@@ -100,8 +112,8 @@ namespace php\utl;
 //             // echo $sql;
 //             // var_dump( $params );
 
-//             $dataPdo = self::getPdo();
-//             $pdoStatement = $dataPdo->prepare( $sql );
+//             $dbPdo = self::getPdo();
+//             $pdoStatement = $dbPdo->prepare( $sql );
     
 //             foreach( $params as $key=>$value ) {
 //                 $pdoStatement->bindParam( ':' . $key, $params->$key );
@@ -139,7 +151,7 @@ namespace php\utl;
 
 //         // Close the database connection on destruction.
 //         public function __destruct() {
-//             $this->datapdo->close();
+//             $this->dbPdo->close();
 //         }
         
         
