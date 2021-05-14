@@ -6,6 +6,9 @@
 <body>
     <?php include_once "./php/header.php"; ?>
 
+    <?php include_once "./php/featured.php"; ?>
+
+
     <?php include_once "./php/footer.php"; ?>
 
     <?php include_once "./php/bodyScripts.php"; ?>
