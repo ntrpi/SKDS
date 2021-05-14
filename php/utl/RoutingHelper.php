@@ -1,6 +1,6 @@
 <?php
 
-namespace Codesses\php\Models
+namespace php\utl
 {
     class RoutingHelper 
     {

@@ -1,10 +1,14 @@
 <?php
 
-use php\utl\{DB};
+use php\utl\{DB,MSql};
 require_once "utl/Database.php";
+require_once "utl/MySqlHelper.php";
 
+$mysqlHelper = new MSql( "featuredPosts", "featuredPostId" );
+$sql = $mysqlHelper->getFindWhereSql( "postId" );
+$params = MSql::getParam( "postId", "1" );
 
-$featuredPosts = DB::getDbResult( "SELECT * FROM featuredPosts where postId=1" );
+$featuredPosts = DB::getDbResultWithParams( $sql, $params );
 var_dump( $featuredPosts );
 
 
