@@ -324,6 +324,10 @@ form button.btn-primary:hover {
   font-size: 35px;
 }
 
+.title h2 {
+  font-size: 35px;
+}
+
 .title .title-blue {
   color: #26264b;
 }

@@ -66,12 +66,17 @@ foreach( $featuredPosts as $fPost ) {
 <!-- Recent Posts Start -->
 <section class="recent-posts">
     <div class="container">
-        <div class="row">
-            <?php
-                foreach( $postDivs as $div ) {
-                    echo $div;
-                }
-            ?>
+        <div class="title text-center">
+            <h2 class="h2 title-blue">Projects</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <?php
+                    foreach( $postDivs as $div ) {
+                        echo $div;
+                    }
+                ?>
+            </div>
         </div>
     </div>
 </section>
