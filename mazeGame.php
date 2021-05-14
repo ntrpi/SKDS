@@ -11,10 +11,22 @@
 
     <?php include_once "./php/header.php"; ?>
 
+    <!-- Call To Action Start -->
+    <section class="cta" data-aos="fade-up" data-aos-delay="0">
+        <div class="container">
+            <div class="cta-content d-xl-flex align-items-center justify-content-around text-center text-xl-left">
+                <div class="content" data-aos="fade-right" data-aos-delay="200">
+                    <h2>Maze Game: Chase the Cheese</h2>
+                    <p>Use the arrow buttons or your arrow keys to help the mouse eat all the cheese and finish the maze!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Call To Action End -->
 
-    <main id="main" class="pageWrapper">
+    <section id="mazeSection" class="maze pageWrapper">
       <h2>Chase the Cheese</h2>
-      <div id="mainDiv">
+      <div id="mazeDiv">
         <div id="mazeDiv" class="mazeDiv">
           <img id="cheese1" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
           <img id="cheese2" class="cheese" src="./img/mazeGame/cheese.gif" alt="cheese clip art." height="30">
@@ -61,7 +73,7 @@
           </div>
         </div>
       </div>
-    </main>
+    </section>
 
 
 

@@ -9,7 +9,6 @@ html {
 }
 
 body {
-    margin: 1em;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #251d29;
 
@@ -21,11 +20,7 @@ body {
     --wall: 1px solid #778299;
 }
 
-header {
-    text-align: center;
-}
-
-h2 {
+.maze h2 {
     font-family: 'Ranchers', Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px var( --mediumGrey );
     color: rgb(253, 176, 87);
@@ -33,7 +28,8 @@ h2 {
     text-transform: uppercase;
 }
 
-main {
+#mazeSection {
+    margin: 3rem 1em;
     text-align: center;
 }
 
@@ -48,21 +44,21 @@ main {
     position: relative;
 }
 
-#mainDiv {
+#mazeDiv {
     display: flex;
     flex-direction: row;
     min-width: 475px;
 }
 
 @media screen and (max-width: 700px) {
-    #mainDiv {
+    #mazeDiv {
         flex-direction: column;
     }
 }
 
 .mazeDiv {
     width: 100%;
-    margin: 25px;
+    margin: 4rem;
 }
 
 #restart {
