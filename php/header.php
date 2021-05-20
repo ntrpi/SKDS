@@ -57,14 +57,7 @@
                 <div class="col-12 offset-md-1 col-md-11">
                     <div class="slide-content d-flex align-items-center">
                         <div class="single-slide">
-                            <h1 data-aos="fade-right" data-aos-delay="200">Sandra Kupfer<br>Developer
-                            </h1>
-                            <p data-aos="fade-right" data-aos-delay="600">An accomplished software developer with over fifteen years of full stack development experience.
-                            </p>
-                            <!-- <a data-aos="fade-right" data-aos-delay="900" href="#" class="btn btn-primary">See
-                                More</a>
-                            <a data-aos="fade-right" data-aos-delay="900" href="#" class="btn btn-primary">Get
-                                Now</a> -->
+                            <h1 data-aos="fade-right" data-aos-delay="200">Sandra K&uuml;pfer<br></h1>
                         </div>
                     </div>
                 </div>

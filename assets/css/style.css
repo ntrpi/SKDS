@@ -177,7 +177,7 @@ form button.btn-primary:hover {
 }
 
 .hero .slide-content {
-  min-height: 450px;
+  min-height: 400px;
   color: #fff;
 }
 
@@ -933,4 +933,13 @@ span {
 
 .foot-note a.fh5-link {
   margin-left: 0;
+}
+
+.code {
+  border-radius: 5px;
+  background-color:rgb(247, 247, 247);
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  padding: .5rem;
 }

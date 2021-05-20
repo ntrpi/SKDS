@@ -1,4 +1,17 @@
 /*-----------------------------------
+    Extra small devices (Phones, 300px and up)
+------------------------------------*/
+@media (max-width: 575px) {
+ .hero .slide-content {
+    min-height: 300px;
+  }
+  .hero .slide-content h1 {
+    font-size: 3rem;
+    margin-top: 75px;
+  }
+}
+
+/*-----------------------------------
     Small devices (landscape phones, 576px and up)
 ------------------------------------*/
 @media (min-width: 576px) {
@@ -6,10 +19,11 @@
     padding: 25px 0 15px;
   }
   .hero .slide-content {
-    min-height: 500px;
+    min-height: 400px;
   }
   .hero .slide-content h1 {
-    margin-top: 100px;
+    font-size: 3.5rem;
+    margin-top: 75px;
   }
   .recent-posts .row .col-lg-6:nth-of-type(odd) .post-thumb {
     margin-top: 0;
@@ -148,7 +162,7 @@
     margin-right: 22px;
   }
   .hero .slide-content {
-    min-height: 95vh;
+    min-height: 75vh;
   }
   .hero .slide-content h1 {
     font-size: 4.5rem;
@@ -160,6 +174,7 @@
   .hero .arr-right {
     top: 50%;
   }
+
   .title h2 {
     font-size: 48px;
   }
@@ -194,5 +209,7 @@
     right: 0;
     height: 100%;
     padding: 75px 0;
+    margin-right: 10%;
+    padding-left: 2rem;
   }
 }
