@@ -715,6 +715,10 @@
   content: "";
 }
 
+.fa-github-square:before {
+  content: "";
+}
+
 .fa-camera-retro:before {
   content: "";
 }
@@ -2326,6 +2330,10 @@
 }
 
 .fa-facebook-official:before {
+  content: "";
+}
+
+.fa-github-official:before {
   content: "";
 }
 
