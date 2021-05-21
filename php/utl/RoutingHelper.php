@@ -4,6 +4,8 @@ namespace skds\php\utl
 {
     class RoutingHelper 
     {
+        public const VAL_POST = "postId";
+
         private function __construct(){}
 
         public static function getValue( $key )

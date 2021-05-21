@@ -19,6 +19,11 @@ TODO: index.php
 
 TODO: footer
 
+TODO: Posts
+- sidebar post links
+- more posts
+- post tags
+
 */
 ?>
 
@@ -27,6 +32,8 @@ TODO: footer
 <html lang="en">
 <head>
     <?php include_once "./php/head.php"; ?>
+    <!-- Document title -->
+    <title>SKDS Home</title>
 </head>
 <body>
 
@@ -48,11 +55,8 @@ TODO: footer
     </section>
     <!-- Call To Action End -->
 
-
-    <?php include_once "./php/post.php"; ?>
-
-        <!-- Trust Start -->
-        <section class="trust">
+    <!-- Trust Start -->
+    <section class="trust">
         <div class="container">
             <div class="row">
                 <div class="col-xl-5" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">

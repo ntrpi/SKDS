@@ -873,6 +873,13 @@ span {
   box-shadow: none;
 }
 
+.subscribe-widget textarea {
+  font-size: 14px;
+  padding: 10px;
+  background-color: #040243;
+  border: none;
+}
+
 .subscribe-widget button {
   background: #da208d;
   border: none;
@@ -886,6 +893,17 @@ span {
 
 .subscribe-widget button i {
   color: #fff;
+}
+
+.subscribe-widget .accent {
+  background: #da208d;
+  border: none;
+  padding: 9px 5px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: -5px;
+  position: relative;
+  z-index: 5;
 }
 
 .subscribe-widget .social-nav {

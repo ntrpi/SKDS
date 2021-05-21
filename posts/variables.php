@@ -1,13 +1,3 @@
-<?php
-
-$leaderTitle = "";
-$title = "";
-$paragraphs = array();
-$images = array();
-$links = array();
-
-?>
-
 <!-- https://preview.colorlib.com/#wordify -->
 <section class="site-section py-lg">
     <div class="container">
@@ -291,6 +281,7 @@ $links = array();
                     </ul>
                 </div>
             </div>
+            <?php include_once "postSidebar.php" ?>
         </div>
     </div>
 </section>

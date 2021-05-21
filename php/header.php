@@ -24,19 +24,20 @@
                         aria-expanded="false" aria-label="Toggle navigation"><span
                             class="navbar-toggler-icon"></span></button>
                     <a class="login-icon d-sm-none" href="#"><i class="fa fa-user"></i></a>
-                    <a class="cart" href="#"><i class="fa fa-shopping-cart"></i></a>
+                    <!-- <a class="cart" href="#"><i class="fa fa-shopping-cart"></i></a> -->
+                    <a href="https://www.linkedin.com/in/sandra-kupfer/"><i class="fa fa-linkedin"></i></a>
+                    <a class="mx-3" href="https://github.com/ntrpi"><i class="fa fa-github"></i></a>
                 </div>
-                <a class="search-icon d-none d-md-block" href="#"><i class="fa fa-search"></i></a>
+                <!-- <a class="search-icon d-none d-md-block" href="#"><i class="fa fa-search"></i></a> -->
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Services</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Portfolio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Shop</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Posts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Extras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="mailto:kupfer.sandra.m@gmail.com">Contact</a></li>
                     </ul>
-                    <form class="bg-white search-form" method="get" id="searchform">
+                    <!-- <form class="bg-white search-form" method="get" id="searchform">
                         <div class="input-group">
                             <input class="field form-control" id="s" name="s" type="text" placeholder="Search">
                             <span class="input-group-btn">
@@ -44,7 +45,7 @@
                                     value="Search">
                             </span>
                         </div>
-                    </form>
+                    </form> -->
                 </div>
             </nav>
         </div>
