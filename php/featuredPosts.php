@@ -14,7 +14,7 @@ function getTextDiv( $isRight, $title, $description, $link )
 
     $div = '<div class="post-content' . $textRightClass . '">';
     $div .= '<h3><a href="' . $link . '">' . $title . '</a></h3>';
-    $div .= '<p><a href="' . $link . '">' . $description . '</a></p>';
+    $div .= '<p>' . $description . '</p>';
     $div .= '<a class="post-btn" href="' . $link . '"><i class="fa fa-arrow-right"></i></a>';
     $div .= '</div>';
     return $div;
@@ -67,7 +67,7 @@ foreach( $featuredPosts as $fPost ) {
 <section class="recent-posts">
     <div class="container">
         <div class="title text-center">
-            <h2 class="title-blue">Projects</h2>
+            <h2 class="title-blue">Featured Posts</h2>
         </div>
         <div class="container">
             <div class="row">
