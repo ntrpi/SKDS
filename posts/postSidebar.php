@@ -6,7 +6,7 @@
                 class="img-fluid w-25 m-4">
             <div class="bio-body">
                 <h2>Sandra K&uuml;pfer</h2>
-                <p>I am a software developer, artist, wife, and mother of two great kids. When I'm not coding and solving technical problems, I am making things or drving my kids to their various activities.</p>
+                <p>I am a software developer, artist, wife, and mother of two great kids. When I'm not coding and solving technical problems, I am making things or driving my kids to their various activities.</p>
                 <p><a href="#" class="btn btn-primary">More</a></p>
             </div>
         </div>

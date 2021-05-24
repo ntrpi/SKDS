@@ -132,7 +132,7 @@
                         please.</p>
                     <p>Let&rsquo;s break it down a bit more. We&rsquo;ve all created a variable something like
                         this:</p>
-                    <pre><code class="code">int i = 0;</code></pre>
+                    <pre class="code"><code>int i = 0;</code></pre>
 
                     <p>Here you are asking the computer to give you 1 byte (in this case; we&rsquo;ll talk
                         about types later), turn off all its bits (setting the value to 0), and remember that you are calling this
@@ -275,7 +275,7 @@
                     </ul>
 
                     <h4>References</h4>
-                    <ul class="list-unstyled">
+                    <ul class="list-unstyled mb-4">
                         <li><a href="https://homepage.cs.uri.edu/faculty/wolfe/book/Readings/Reading02.htm">Data In The Computer</a></li>
                         <li><a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html">Java Docs: Primitive Data Types</a></li>
                     </ul>

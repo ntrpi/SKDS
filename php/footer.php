@@ -77,7 +77,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 px-5">
+                    <div class="col-md-4 px-5" id="contact">
                         <div class="single-widget" data-aos="fade-up" data-aos-delay="800">
                             <h6 class="widget-tiltle">Contact Me</h6>
                             <form class="contact-form" method="get">

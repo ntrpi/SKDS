@@ -32,10 +32,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Posts</a></li>
                         <li class="nav-item"><a class="nav-link" href="#">Extras</a></li>
-                        <li class="nav-item"><a class="nav-link" href="mailto:kupfer.sandra.m@gmail.com">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                     <!-- <form class="bg-white search-form" method="get" id="searchform">
                         <div class="input-group">
