@@ -88,7 +88,7 @@ TODO: Posts
     <section class="trust">
         <div class="container">
             <div class="row">
-                <div class="col-xl-3" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
+                <div class="col-md-5" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                     <div class="title">
                         <h6 class="title-primary">ASP.NET Passion Project</h6>
                         <h2>Art Gallery</h2>
@@ -101,7 +101,7 @@ TODO: Posts
                         <li><a href="https://github.com/ntrpi/ArtGallery">Github</a></li>
                     </ul>
                 </div>
-                <div class="col-xl-3 gallery">
+                <div class="col-md-5 gallery">
                     <div class="row no-gutters">
                         <div class="w-50 h-100 gal-img-x" data-aos="fade-up"
                             data-aos-delay="200" data-aos-duration="400">
@@ -114,10 +114,6 @@ TODO: Posts
                                 <img class="img-fluid" src="img/artGallery/canvas3.png" alt="Website screenshot.">
                             </div>
                         </div>
-                        <!-- <div class="w-50 h-50 gal-img-x gal-img3" data-aos="fade-up"
-                            data-aos-delay="0" data-aos-duration="600">
-                            <img class="img-fluid" src="img/artGallery/canvas3.png" alt="Website screenshot.">
-                        </div> -->
                     </div>
                 </div>
             </div>

@@ -135,7 +135,7 @@
   }
   .featured-img {
     height: 100%;
-    margin-top: -66px;
+    margin-top: -.1rem;
   }
   .cta-content {
     border-top-right-radius: 200px;
@@ -201,7 +201,7 @@
     padding-top: 70px;
   }
   .trust ul {
-    padding-bottom: 30px;
+    padding-bottom: 5rem;
   }
   .trust .gallery {
     position: absolute;
@@ -225,6 +225,9 @@
     height: 310px;
   }
 
+  .single-widget {
+    padding: .1rem 1rem;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -239,4 +242,9 @@
     margin-top: 2rem;
     margin-bottom: 0;
   }
+
+  .single-widget {
+    padding: .1rem 1.5rem;
+  }
+
 }

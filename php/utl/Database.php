@@ -9,7 +9,7 @@ namespace skds\php\utl;
         private static $host = "158.69.17.240:3306";
         private static $database = "skdssite_site";
         private static $userName = "skdssite_me";
-        private static $password = "";
+        private static $password = "8EbT-AC*j96,";
 
         private static $dbPdo;
     

@@ -1,11 +1,62 @@
-    <!-- Footer Start -->
+<?php
+
+use skds\php\Models\{Project, Image, ProjectImage};
+require_once "Models/Project.php";
+require_once "Models/Image.php";
+require_once "Models/ProjectImage.php";
+
+$projectHelper = new Project();
+$projects = $projectHelper->getProjects();
+
+$projectDivs = array();
+$imageHelper = new Image();
+$projectImageHelper = new ProjectImage();
+$counter = 0;
+foreach( $projects as $proj ) {
+
+    if( $counter == 4 ) {
+        break;
+    }
+    $counter++;
+
+    $projectId = $proj->projectId;
+    $projectName = $proj->name;
+    $projectLink = $proj->link;
+
+    $projectImages = $projectImageHelper->getProjectImagesWhere( "projectId", $projectId );
+    $imageId = 0;
+    $orderNumber = 2;
+    foreach( $projectImages as $projImg ) {
+        if( $projImg->orderNumber < $orderNumber ) {
+            $imageId = $projImg->imageId;
+            $orderNumber = $projImg->orderNumber;
+        }
+    }
+
+    $image = $imageHelper->getImage( $imageId );
+    $imageSrc = $image->path;
+    $altText = $image->altText;
+    
+    $div = "
+    <div class=\"media\">
+        <a class=\"rcnt-img\" href=\"{$projectLink}\"><img src=\"{$imageSrc}\" alt=\"{$altText}\"></a>
+        <div class=\"media-body ml-3\">
+            <h6><a href=\"{$projectLink}\">{$projectName}</a></h6>
+        </div>
+    </div>";
+
+    array_push( $projectDivs, $div );
+}
+?>
+
+<!-- Footer Start -->
     <footer>
         <!-- Widgets Start -->
         <div class="footer-widgets">
             <div class="container">
 
                 <div class="row">
-                    <div class="col-md-4 px-5">
+                    <div class="col-md-4">
                         <div class="single-widget contact-widget" data-aos="fade-up" data-aos-delay="0">
                             <h6 class="widget-title text-uppercase">Sandra K&uuml;pfer</h6>
                             <div class="testimonials p-3 pt-5">
@@ -26,7 +77,7 @@
                                 <i class="fa fa-envelope-o"></i>
                                 <div class="media-body ml-3">
                                     <h6>Email</h6>
-                                    <a href="mailto:kupfer.sandra.m@gmail.com">kupfer.sandra.m@gmail.com</a>
+                                    <a href="mailto:kupfer.sandra.m@gmail.com"><div class="d-inline-block">kupfer.sandra.m</div><div class="d-inline">@gmail.com</div></a>
                                 </div>
                             </div>
                             <div class="media">
@@ -38,46 +89,23 @@
                             </div>
                         </div>
                         <div class="subscribe-widget">
-                            <ul class="nav social-nav">
+                            <ul class="nav social-nav ml-5">
                                 <li><a href="https://www.linkedin.com/in/sandra-kupfer/"><i class="fa fa-linkedin mt-2"></i></a></li>
                                 <li><a href="https://github.com/ntrpi"><i class="fa fa-github mt-2"></i></a></li>
                             </ul>
                         </div>
                 </div>
-                    <div class="col-md-4 px-5">
+                    <div class="col-md-4">
                         <div class="single-widget recent-post-widget" data-aos="fade-up" data-aos-delay="400">
                             <h6 class="widget-tiltle">Projects</h6>
-                            <div class="media">
-                                <a class="rcnt-img" href="#"><img src="assets/images/rcnt-post1.png"
-                                        alt="Recent Post"></a>
-                                <div class="media-body ml-3">
-                                    <h6><a href="#">An engaging</a></h6>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <a class="rcnt-img" href="#"><img src="assets/images/rcnt-post2.png"
-                                        alt="Recent Post"></a>
-                                <div class="media-body ml-3">
-                                    <h6><a href="#">Statistics and analysis. The key to succes.</a></h6>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <a class="rcnt-img" href="#"><img src="assets/images/rcnt-post3.png"
-                                        alt="Recent Post"></a>
-                                <div class="media-body ml-3">
-                                    <h6><a href="#">Envato Meeting turns into a photoshooting.</a></h6>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <a class="rcnt-img" href="#"><img src="assets/images/rcnt-post4.png"
-                                        alt="Recent Post"></a>
-                                <div class="media-body ml-3">
-                                    <h6><a href="#">An engaging embedded the video posts</a></h6>
-                                </div>
-                            </div>
+                            <?php
+                                foreach( $projectDivs as $div ) {
+                                    echo $div;
+                                }
+                            ?>
                         </div>
                     </div>
-                    <div class="col-md-4 px-5" id="contact">
+                    <div class="col-md-4" id="contact">
                         <div class="single-widget" data-aos="fade-up" data-aos-delay="800">
                             <h6 class="widget-tiltle">Contact Me</h6>
                             <form class="contact-form" method="get">

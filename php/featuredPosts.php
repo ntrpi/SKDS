@@ -22,7 +22,7 @@ function getTextDiv( $isRight, $title, $description, $link )
 
 function getImageDiv( $image, $altText )
 {
-    $div = '<div class="post-thumb">';
+    $div = '<div class="post-thumb text-center">';
     $div .= '<img class="img-fluid" src="' . $image . '" alt="' . $altText . '">';
     $div .= '</div>';
     return $div;

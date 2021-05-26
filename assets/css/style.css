@@ -583,6 +583,7 @@ form button.btn-primary:hover {
 
 .trust .gal-img-x img {
   margin: 1rem;
+  max-height: 550px;
 }
 
 /*-----------------------------------
@@ -786,6 +787,7 @@ footer {
 
 .single-widget {
   color: #aaa;
+  padding: .1rem 2.5rem;
 }
 
 .single-widget .widget-tiltle {
@@ -957,6 +959,7 @@ span {
 .subscribe-widget .social-nav a:hover {
   background-color: #da208d;
 }
+
 
 /*-----------------------------------
     1 - Foot Note
