@@ -1,5 +1,64 @@
+<?php
+
+use skds\php\utl\RH;
+require_once( __DIR__ . "/../php/utl/RoutingHelper.php" );
+$currentPostId = RH::getValue( RH::VAL_POST );
+
+
+use skds\php\Models\{FeaturedPost, Post, PostImage};
+$modelsDir = __DIR__  . "/../php/Models/";
+require_once( $modelsDir. "FeaturedPost.php" );
+require_once( $modelsDir. "Post.php" );
+require_once( $modelsDir. "PostImage.php" );
+
+$dbHelper = new FeaturedPost();
+$featuredPosts = $dbHelper->getFeaturedPosts();
+
+$listItems = array();
+$postHelper = new Post();
+$postImageHelper = new PostImage();
+foreach( $featuredPosts as $fPost ) {
+
+    $postId = $fPost->postId;
+    if( $postId == $currentPostId ) {
+        continue;
+    }
+    
+    $post = $postHelper->getPost( $postId );
+    $postLink = $fPost->link;
+
+    $postImageId = $fPost->postImageId;
+    $postImage = $postImageHelper->getPostImage( $postImageId );
+
+    $li = "<li>
+        <a href=\"{$postLink}\">
+            <div>
+                <span class=\"mr-2\">{$post->created}</span>
+            </div>
+            <img src=\"{$postImage->image}\" alt=\"$postImage->altText\" class=\"img-fluid mr-4\">
+            <div class=\"text\">
+                <h4>{$post->title}</h4>
+            </div>
+        </a>
+    </li>";
+
+    array_push( $listItems, $li );
+}
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- https://preview.colorlib.com/#wordify -->
-<div class="col-md-12 col-lg-4 sidebar">
+<div class="col-md-12 col-xl-4 sidebar">
     <div class="sidebar-box">
         <div class="bio text-center">
             <img src="./img/headshots/HeadShot1.png" alt="Headshot of Sandra Kupfer."
@@ -13,48 +72,14 @@
     </div>
 
     <div class="sidebar-box">
-        <h3 class="heading">Popular Posts</h3>
+        <h3 class="heading mt-5 mb-3">Popular Posts</h3>
         <div class="post-entry-sidebar">
-            <ul>
-                <li>
-                    <a href="">
-                        <img src="images/ximg_1.jpg.pagespeed.ic.A97ox_2Q5a.webp" alt="Image placeholder"
-                            class="mr-4" data-pagespeed-url-hash="1596641133"
-                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                        <div class="text">
-                            <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                            <div class="post-meta">
-                                <span class="mr-2">March 15, 2018 </span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/ximg_1.jpg.pagespeed.ic.A97ox_2Q5a.webp" alt="Image placeholder"
-                            class="mr-4" data-pagespeed-url-hash="1596641133"
-                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                        <div class="text">
-                            <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                            <div class="post-meta">
-                                <span class="mr-2">March 15, 2018 </span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="images/ximg_1.jpg.pagespeed.ic.A97ox_2Q5a.webp" alt="Image placeholder"
-                            class="mr-4" data-pagespeed-url-hash="1596641133"
-                            onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
-                        <div class="text">
-                            <h4>There’s a Cool New Way for Men to Wear Socks and Sandals</h4>
-                            <div class="post-meta">
-                                <span class="mr-2">March 15, 2018 </span>
-                            </div>
-                        </div>
-                    </a>
-                </li>
+            <ul class="list-unstyled">
+            <?php
+                    foreach( $listItems as $li ) {
+                        echo $li;
+                    }
+                ?>
             </ul>
         </div>
     </div>

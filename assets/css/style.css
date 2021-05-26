@@ -355,12 +355,12 @@ form button.btn-primary:hover {
     1 - Featured
 ------------------------------------*/
 .featured {
-  padding: 80px 0;
+  padding: 2rem 0 3rem;
   background-color: #fafafa;
 }
 
 .featured p {
-  margin: 35px 0 53px;
+  margin: 3rem 0;
 }
 
 .featured .media i {
@@ -374,7 +374,8 @@ form button.btn-primary:hover {
 }
 
 .featured .btn {
-  margin-top: 80px;
+  margin-top: 4rem;
+  margin-right: 2rem;
 }
 
 .featured-img {
@@ -478,7 +479,7 @@ form button.btn-primary:hover {
     1 - Trust
 ------------------------------------*/
 .trust {
-  padding: 75px 0;
+  padding: 2rem 0 3rem;
   background-color: #26264b;
   color: #ddd;
   position: relative;
@@ -510,10 +511,9 @@ form button.btn-primary:hover {
 }
 
 .trust .gallery img {
-  width: 100%;
+  width: 95%;
   -o-object-fit: cover;
-     object-fit: cover;
-  height: 100%;
+     object-fit: contain;
 }
 
 .trust .gal-img {
@@ -558,7 +558,7 @@ form button.btn-primary:hover {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   position: absolute;
-  top: 0;
+  top: 0; 
   left: 0;
   opacity: 0;
   transition: all 0.2s ease-in-out;
@@ -577,8 +577,12 @@ form button.btn-primary:hover {
 }
 
 .trust .gal-img3 {
-  top: -50%;
+  top: -100%;
   left: 50%;
+}
+
+.trust .gal-img-x img {
+  margin: 1rem;
 }
 
 /*-----------------------------------
@@ -773,7 +777,7 @@ footer {
     1 - Footer Widgets
 ------------------------------------*/
 .footer-widgets {
-  padding: 100px 0;
+  padding: 3rem 0;
 }
 
 .footer-widgets .col-md-6 .single-widget:not(:first-child) .widget-tiltle {
@@ -848,6 +852,10 @@ span {
 
 .recent-post-widget i:last-of-type {
   margin-left: 15px;
+}
+
+.recent-post-widget:last-child {
+  padding-bottom: 2rem;
 }
 
 .tags-widget {
@@ -925,7 +933,7 @@ span {
 }
 
 .subscribe-widget .social-nav {
-  margin-top: 32px;
+  padding: 2rem 0;
 }
 
 .subscribe-widget .social-nav a {
@@ -995,4 +1003,20 @@ span {
 
 .site-section {
   overflow-x: hidden;
+}
+
+.sidebar {
+  padding: 3rem;
+}
+
+.sidebar span {
+  color: #da208d;
+}
+
+.sidebar img {
+  max-width: 50%;
+}
+
+.sidebar li {
+  padding-bottom: 3rem;
 }

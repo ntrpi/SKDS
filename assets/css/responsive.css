@@ -207,9 +207,36 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 100%;
     padding: 75px 0;
     margin-right: 10%;
     padding-left: 2rem;
+  }
+}
+
+@media screen and ( max-width: 568px ) {
+  
+  .featured .btn {
+    margin-top: 1.8rem;
+    margin-right: 1.2rem;
+    padding: .7rem 1.3rem;
+  }
+
+  .featured-img {
+    height: 310px;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .featured .btn {
+    margin-top: 2.5rem;
+    margin-right: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  
+  .featured p {
+    margin-top: 2rem;
+    margin-bottom: 0;
   }
 }

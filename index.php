@@ -15,7 +15,6 @@ TODO: Art Gallery
 - lots
 
 TODO: index.php
-- image margins for Manitouadge content
 
 TODO: footer
 - project links
@@ -23,7 +22,6 @@ TODO: footer
 
 TODO: Posts
 - sidebar post links
-- more posts
 - post tags
 
 */
@@ -50,44 +48,30 @@ TODO: Posts
                     <p>Over fifteen years of software development experience.</p>
                 </div>
                 <div class="subscribe-btn" data-aos="fade-left" data-aos-delay="400" data-aos-offset="0">
-                    <a href="docs/SANDRA KÜPFER.pdf" download="docs/SANDRA KÜPFER.pdf" class="btn btn-primary">Download Resume</a>
+                    <a href="docs/SANDRA KÜPFER.pdf" download="SANDRA KÜPFER.pdf" class="btn btn-primary">Download Resume</a>
                 </div>
             </div>
         </div>
     </section>
     <!-- Call To Action End -->
 
-    <div class="title text-center m-5"  data-aos="fade-up" data-aos-delay="100" id="projects">
-        <h2 class="title-blue mt-5">Projects</h2>
+    <div class="title text-center mt-5 mb-4"  data-aos="fade-up" data-aos-delay="100" id="projects">
+        <h2 class="title-blue ">Projects</h2>
     </div>
 
     <!-- Featured Start -->
     <section class="featured">
         <div class="container">
+            <div class="title">
+                <h6 class="title-primary">Website Redesign Group Project</h6>
+                <h2 class="title-blue">Manitouadge General Hospital</h2>
+            </div>
             <div class="row">
                 <div class="col-md-6" data-aos="fade-right" data-aos-delay="400" data-aos-duration="800">
-                    <div class="title">
-                        <h6 class="title-primary">Website Redesign Group Project</h6>
-                        <h2 class="title-blue">Manitouadge General Hospital</h2>
-                    </div>
                     <p>This project is the result of the work from several second semester classes of the Humber Web Development program. The goal is to showcase our ability to envision, plan, and implement a large-scale project with real-world application.</p>
-                    <!-- <div class="media-element d-flex justify-content-between">
-                        <div class="media">
-                            <div class="media-body">
-                                <h5>any offer</h5>
-                                New York, United States
-                            </div>
-                        </div>
-                        <div class="media">
-                            <div class="media-body">
-                                <h5>any offer</h5>
-                                New York, United States
-                            </div>
-                        </div>
-                    </div> -->
-                    <a href="http://manitouwadge-env.eba-2riijnak.us-east-2.elasticbeanstalk.com/" class="btn btn-primary">Website</a>
-                    <a href="https://github.com/ntrpi/ManitouadgeHospitalProject" class="btn btn-primary ml-4">Github</a>
-                    <div><a href="https://drive.google.com/drive/folders/1Q3Dks1G-jq4-UOpELw_8PRKidU6pBUc3?usp=sharing" class="btn btn-primary">Docs</a></div>
+                    <a href="http://skds.us-east-2.elasticbeanstalk.com/" class="btn btn-primary">Website</a>
+                    <a href="https://github.com/ntrpi/ManitouadgeHospitalProject" class="btn btn-primary">Github</a>
+                    <a href="https://drive.google.com/drive/folders/1Q3Dks1G-jq4-UOpELw_8PRKidU6pBUc3?usp=sharing" class="btn btn-primary">Docs</a>
                 </div>
                 <div class="col-md-6" data-aos="fade-left" data-aos-delay="400" data-aos-duration="800">
                     <div class="featured-img">
@@ -104,7 +88,7 @@ TODO: Posts
     <section class="trust">
         <div class="container">
             <div class="row">
-                <div class="col-xl-5" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
+                <div class="col-xl-3" data-aos="fade-right" data-aos-delay="200" data-aos-duration="800">
                     <div class="title">
                         <h6 class="title-primary">ASP.NET Passion Project</h6>
                         <h2>Art Gallery</h2>
@@ -117,20 +101,23 @@ TODO: Posts
                         <li><a href="https://github.com/ntrpi/ArtGallery">Github</a></li>
                     </ul>
                 </div>
-                <div class="col-xl-5 gallery">
-                    <div class="row no-gutters h-100" id="lightgallery">
+                <div class="col-xl-3 gallery">
+                    <div class="row no-gutters">
                         <div class="w-50 h-100 gal-img-x" data-aos="fade-up"
                             data-aos-delay="200" data-aos-duration="400">
-                            <img class="img-fluid" src="img/artGallery/canvas1.png" alt="Website screenshot.">
+                            <img class="img-fluid" src="img/artGallery/canvas1_2.jpg" alt="Website screenshot.">
                         </div>
                         <div class="w-50 h-50 gal-img-x" data-aos="fade-up"
                             data-aos-delay="400" data-aos-duration="600">
                             <img class="img-fluid" src="img/artGallery/home2.png" alt="Website screenshot.">
+                            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="600">
+                                <img class="img-fluid" src="img/artGallery/canvas3.png" alt="Website screenshot.">
+                            </div>
                         </div>
-                        <div class="w-50 h-50 gal-img-x gal-img3" data-aos="fade-up"
+                        <!-- <div class="w-50 h-50 gal-img-x gal-img3" data-aos="fade-up"
                             data-aos-delay="0" data-aos-duration="600">
                             <img class="img-fluid" src="img/artGallery/canvas3.png" alt="Website screenshot.">
-                        </a>
+                        </div> -->
                     </div>
                 </div>
             </div>
