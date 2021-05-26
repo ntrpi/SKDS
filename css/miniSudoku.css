@@ -1,0 +1,114 @@
+html {
+  box-sizing:border-box;
+}
+
+*, *::before, *::after {
+  box-sizing:inherit;
+}
+
+body {
+  margin: 1em;
+  font-family:Arial,Helvetica,sans-serif;
+
+  --bigBorder: 2px solid black;
+  --smallBorder: 1px solid black;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  text-align: center;
+}
+
+#messageDiv {
+  padding-top: .5em;
+  padding-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  position: absolute;
+  left: -10000px;
+  width: 1px;
+  height: 1px;
+}
+
+.pageWrapper {
+  max-width:850px;
+  margin:0 auto;
+  position:relative;
+}
+
+.cellStyle {
+  padding: .75em;
+  border: 1px solid black;
+}
+
+.inputStyle {
+  border: 0;
+  margin: 0;
+  width: 1em;
+}
+
+.borderRight {
+  border-right: var( --bigBorder );
+}
+
+.borderLeft {
+  border-left: var( --bigBorder );
+}
+
+.borderTop {
+  border-top: var( --bigBorder );
+}
+
+.borderBottom {
+  border-bottom: var( --bigBorder );
+}
+
+.initializedTile {
+  font-style: oblique;
+  font-weight: bold;
+}
+
+#gameForm {
+  padding: .751em;
+  width: 100%;
+}
+
+.formDiv {
+  display: flex;
+  justify-content: space-around;
+}
+
+.selectLabel {
+  padding: .75em;
+}
+
+#dimensionSelect {
+  padding: .3em;
+}
+
+table {
+  border-spacing: 0;
+}
+#gameTable {
+  padding: .75em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tableDiv {
+  width: 100%;
+  margin: 1rem auto;
+}
+
+#restart {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
