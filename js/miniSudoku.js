@@ -504,7 +504,7 @@ class TableInitializer
 
 function initGame( tableInitializer )
 {
-    restart.style.display = "block";
+    restart.style.visibility = "visible";
 
     gameTable.innerHTML = "";
     globalTileCount = 0;

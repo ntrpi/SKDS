@@ -35,7 +35,7 @@
           <table id="gameTable" class="my-3"></table>
         </div>
         <div>
-          <input type="button" name="restart" id="restart" value="Restart" style="display: none;">
+          <input type="button" name="restart" id="restart" value="Restart" style="visibility: hidden; display: block">
         </div>
       </div>
     </section>
