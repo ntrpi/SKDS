@@ -108,10 +108,10 @@ JmNpf!AK3L$q!By
                         </div>
                         <div class="w-50 h-50 gal-img-x" data-aos="fade-up"
                             data-aos-delay="400" data-aos-duration="600">
-                            <img class="img-fluid" src="img/artGallery/home2.png" alt="Website screenshot.">
-                            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="600">
+                            <!-- <img class="img-fluid" src="img/artGallery/home2.png" alt="Website screenshot.">
+                            <div data-aos="fade-up" data-aos-delay="0" data-aos-duration="600"> -->
                                 <img class="img-fluid" src="img/artGallery/canvas3.png" alt="Website screenshot.">
-                            </div>
+                            <!-- </div> -->
                         </div>
                     </div>
                 </div>

@@ -14,7 +14,7 @@ $projectImageHelper = new ProjectImage();
 $counter = 0;
 foreach( $projects as $proj ) {
 
-    if( $counter == 5 ) {
+    if( $counter == 4 ) {
         break;
     }
     $counter++;
