@@ -3,7 +3,6 @@
 Notes:
 
 TODO: Manitouage
-- deploy
 - enter data
 - fix nav
 - add admin access to invoices
@@ -17,13 +16,13 @@ TODO: Art Gallery
 TODO: index.php
 
 TODO: footer
-- project links
 - js for form
 
 TODO: Posts
-- sidebar post links
 - post tags
 
+TODO: Restaurant
+JmNpf!AK3L$q!By
 */
 ?>
 
@@ -35,7 +34,7 @@ TODO: Posts
     <!-- Document title -->
     <title>SKDS Home</title>
 </head>
-<body>
+<body style="overflow-x: hidden;">
 
     <?php include_once "./php/header.php"; ?>
 
@@ -96,7 +95,7 @@ TODO: Posts
                     <p>For this project we were encouraged to create an app about something we have a personal interest in. I started painting in spring of 2020 and I have found that I love it. I created this app as a way to showcase my work, and eventually sell it. Both the app and painting are a work in progress.</p>
                     <h5>Design & Development</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Website</a></li>
+                        <li><a href="http://art-gallery-env.eba-pfm5mwmt.us-east-2.elasticbeanstalk.com/">Website</a></li>
                         <li><a href="https://docs.google.com/document/d/1VeD4BA_O6KAwlSA7q8AKKi96fWe1Rgdt_OUIhPCXpaM/edit?usp=sharing">Docs</a></li>
                         <li><a href="https://github.com/ntrpi/ArtGallery">Github</a></li>
                     </ul>
@@ -127,6 +126,6 @@ TODO: Posts
 
     <?php include_once "./php/footer.php"; ?>
 
-    <?php include_once "./php/bodyScripts.php"; ?> -->
+    <?php include_once "./php/bodyScripts.php"; ?>
 </body>
 </html>

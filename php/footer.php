@@ -14,7 +14,7 @@ $projectImageHelper = new ProjectImage();
 $counter = 0;
 foreach( $projects as $proj ) {
 
-    if( $counter == 4 ) {
+    if( $counter == 5 ) {
         break;
     }
     $counter++;
@@ -77,7 +77,7 @@ foreach( $projects as $proj ) {
                                 <i class="fa fa-envelope-o"></i>
                                 <div class="media-body ml-3">
                                     <h6>Email</h6>
-                                    <a href="mailto:kupfer.sandra.m@gmail.com"><div class="d-inline-block">kupfer.sandra.m</div><div class="d-inline">@gmail.com</div></a>
+                                    <a href="mailto:kupfer.sandra.m@gmail.com" style="text-decoration: none;"><div class="d-inline-block">kupfer.sandra.m</div><div class="d-inline">@gmail.com</div></a>
                                 </div>
                             </div>
                             <div class="media">
