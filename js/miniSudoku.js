@@ -505,6 +505,7 @@ class TableInitializer
 function initGame( tableInitializer )
 {
     restart.style.visibility = "visible";
+    restart.style.display = "block";
 
     gameTable.innerHTML = "";
     globalTileCount = 0;
@@ -548,7 +549,8 @@ window.onload = function ()
 
     let restart = document.getElementById( "restart" );
     restart.onclick = function() {
-        initGame( tableInitializer, validator, initTiles );
+        tableInitializer.setDimension( dimension, new GameMaker( dimension ) );
+        initGame( tableInitializer );
     };
 }
 

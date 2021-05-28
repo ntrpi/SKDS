@@ -181,7 +181,6 @@
   .title h1 {
     font-size: 48px;
   }
-
 }
 
 /*-----------------------------------
@@ -194,9 +193,11 @@
   .title h2 {
     font-size: 58px;
   }
+
   .title h1 {
-    font-size: 58px;
+    font-size: 70px;
   }
+
   .trust .title {
     padding-top: 70px;
   }
@@ -210,6 +211,14 @@
     padding: 75px 0;
     margin-right: 10%;
     padding-left: 2rem;
+  }
+
+  .hero .slide-content {
+    max-height: 50vh;
+  }
+
+  .hero .slide-content h1 {
+    font-size: 6rem;
   }
 }
 
@@ -248,3 +257,4 @@
   }
 
 }
+
