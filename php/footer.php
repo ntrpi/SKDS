@@ -153,7 +153,7 @@ foreach( $projects as $proj ) {
                     </div>
                     <div class="col-md-4">
                         <div class="footer-content text-center text-lg-left d-lg-flex justify-content-between align-items-center">
-                            <p class="mb-0" data-aos="fade-left" data-aos-offset="0"><a href="#">Sitemap</a>
+                            <p class="mb-0" data-aos="fade-left" data-aos-offset="0"><a href="sitemap.html">Sitemap</a>
                             </p>
                         </div>
                     </div>
