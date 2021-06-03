@@ -13,8 +13,6 @@ TODO: Manitouage
 TODO: Art Gallery
 - lots
 
-TODO: index.php
-
 TODO: footer
 - js for form
 
@@ -22,7 +20,6 @@ TODO: Posts
 - post tags
 
 TODO: Restaurant
-JmNpf!AK3L$q!By
 */
 ?>
 
