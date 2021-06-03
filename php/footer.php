@@ -148,7 +148,7 @@ foreach( $projects as $proj ) {
                     </div>
                     <div class="col-md-4">
                         <div class="footer-content text-center text-lg-left d-lg-flex justify-content-between align-items-center">
-                            <p class="mb-0"><a href="#">Privacy Policy</a></p>
+                            <p class="mb-0"><a href="./privacy.php">Privacy Policy</a></p>
                         </div>
                     </div>
                     <div class="col-md-4">

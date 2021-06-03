@@ -400,6 +400,13 @@ form button.btn-primary:hover {
   max-width: 50%;
 }
 
+.privacy h3 {
+    color: #da208d;
+    padding-top: 2rem;
+}
+.privacy .featured p {
+  margin: 1rem 0;
+}
 /*-----------------------------------
     1 - Recent Posts
 ------------------------------------*/
