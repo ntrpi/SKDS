@@ -1005,7 +1005,7 @@ span {
 }
 
 .site-section {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .sidebar {

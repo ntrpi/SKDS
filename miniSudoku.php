@@ -2,7 +2,14 @@
 <html lang="en">
 <head>
     <?php include_once "./php/head.php"; ?>
+
+    <!-- Document title -->
+    <title>SKDS Home</title>
+
+    <!-- Additional CSS -->
     <link rel="stylesheet" href="./css/miniSudoku.css">
+
+    <!-- Additional JS -->
     <script src="./js/miniSudoku.js" async defer></script>
 </head>
 <body>

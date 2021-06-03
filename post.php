@@ -25,11 +25,13 @@ $postTitle = $postObj->title;
 <body>
 
     <?php include_once "./php/header.php"; ?>
-
-    <?php include_once $postFile; ?>
+    
+    <main>
+        <?php include_once "$postFile"; ?>
+    </main>
     
     <?php include_once "./php/footer.php"; ?>
 
-    <?php include_once "./php/bodyScripts.php"; ?> -->
+    <?php include_once "./php/bodyScripts.php"; ?>
 </body>
 </html>

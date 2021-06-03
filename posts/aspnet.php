@@ -1,8 +1,8 @@
 <!-- https://preview.colorlib.com/#wordify -->
 <section class="site-section py-lg">
     <div class="container">
-        <div class="row blog-entries element-animate fadeInUp element-animated">
-            <div class="col-md-12 col-lg-8 main-content">
+    <div class="row">
+            <div class="col-md-12 col-lg-8 mb-5">
                 <div class="title my-5">
                     <h6 class="title-primary">2021-03-21</h6>
                     <h2 class="title-blue">A Web Development Story</h2>
