@@ -4,7 +4,6 @@ Notes:
 
 TODO: Manitouage
 - enter data
-- fix nav
 - add admin access to invoices
 - patient page
 - images

@@ -312,7 +312,7 @@ input[type="month"] {
 
 textarea {
   overflow: auto;
-  resize: vertical;
+  resize: none;
 }
 
 fieldset {
@@ -1801,7 +1801,6 @@ pre code {
   background-color: transparent;
   border-color: #da208d;
   outline: 0;
-  box-shadow: 0 0 0 0.2rem rgba(238, 21, 21, 0.25);
 }
 
 .form-control::-webkit-input-placeholder {

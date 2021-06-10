@@ -8,8 +8,8 @@
                         aria-expanded="false" aria-label="Toggle navigation"><span
                             class="navbar-toggler-icon"></span></button>
                     <!-- <a class="login-icon d-sm-none" href="#"><i class="fa fa-user"></i></a> -->
-                    <a href="https://www.linkedin.com/in/sandra-kupfer/"><i class="fa fa-linkedin"></i></a>
-                    <a href="https://github.com/ntrpi"><i class="fa fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sandra-kupfer/" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                    <a href="https://github.com/ntrpi" aria-label="Github"><i class="fa fa-github" aria-hidden="true"></i></a>
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
