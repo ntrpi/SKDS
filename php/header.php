@@ -14,9 +14,9 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="https://skds.site/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#posts">Posts</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#extras">Extras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#posts">Posts</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/#extras">Extras</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     </ul>
                 </div>
