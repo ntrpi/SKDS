@@ -320,6 +320,11 @@ form button.btn-primary:hover {
   margin-bottom: 20px;
 }
 
+.title .h6 {
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+}
+
 .title h1 {
   font-size: 35px;
 }
@@ -435,12 +440,12 @@ form button.btn-primary:hover {
 }
 
 .post-content {
-  color: #ccc;
+  color: #555;
 }
 
 .post-content time {
   font-size: 14px;
-  color: #ccc;
+  color: #555;
 }
 
 .post-content h3 {
@@ -452,13 +457,13 @@ form button.btn-primary:hover {
   font-weight: 600;
 }
 
-.post-content h3 a:hover {
+.post-content h3 a:matches(:hover, :focus, .active) {
   font-weight: 700;
   text-decoration: none;
 }
 
 .post-content a {
-  color: #ccc;
+  color: #555;
 }
 
 .post-content a:hover {
@@ -466,20 +471,20 @@ form button.btn-primary:hover {
 }
 
 .post-content .post-btn {
-  color: #6e6e6e;
+  color: #fff;
   text-align: center;
-  font-size: 10px;
+  font-size: 16px;
   display: inline-block;
   width: 38px;
   height: 38px;
   line-height: 38px;
   border-radius: 50%;
-  background-color: whitesmoke;
+  background-color: #da208d;
 }
 
 .post-content .post-btn:hover {
+  font-size: 24px;
   color: #fff;
-  background-color: #da208d;
 }
 
 /*-----------------------------------
@@ -788,16 +793,16 @@ footer {
   padding: 3rem 0;
 }
 
-.footer-widgets .col-md-6 .single-widget:not(:first-child) .widget-tiltle {
+.footer-widgets .col-md-6 .single-widget:not(:first-child) .widget-title {
   margin: 40px 0 30px;
 }
 
 .single-widget {
-  color: #aaa;
+  color: #bfbfbf;
   padding: .1rem 2.5rem;
 }
 
-.single-widget .widget-tiltle {
+.single-widget .widget-title {
   font-size: 17px;
   text-transform: uppercase;
   color: #fff;
@@ -808,7 +813,7 @@ footer {
   color: #da208d;
 }
 
-.single-widget h6 {
+.single-widget .h6 {
   color: #fff;
 }
 
@@ -817,7 +822,7 @@ footer {
 }
 
 .contact-widget a {
-  color: #aaa;
+  color: #bfbfbf;
 }
 
 .contact-widget i {
@@ -829,9 +834,6 @@ footer {
   color: #777;
 }
 
-span {
-  color: #fff;
-}
 
 .recent-post-widget .rcnt-img {
   width: 68px;
@@ -872,7 +874,7 @@ span {
 }
 
 .tags-widget a {
-  color: #aaa;
+  color: #bfbfbf;
   display: inline-block;
   padding: 10px 12px;
   border-radius: 2px;
