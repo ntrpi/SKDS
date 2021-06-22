@@ -69,7 +69,7 @@
                 <div class="message" id="message"></div>
             </div>
             <div>
-                <input type="button" name="restart" id="restart" value="New Maze">
+                <input id="restart" type="button" name="restart" id="restart" value="New Maze">
             </div>
             </div>
         </div>

@@ -594,11 +594,12 @@ function checkKey(e)
 };
 
 var mouse;
+var maze;
 
 window.onload = function() 
 {
     mouse = document.getElementById( "mouse" );
-    var maze = document.getElementById( "maze" );
+    maze = document.getElementById( "maze" );
     mazeOffsetLeft = getOffsetLeft( maze );
     mazeOffsetTop = getOffsetTop( maze );
     makeMaze();
@@ -624,16 +625,38 @@ window.onload = function()
     var leftBtns = document.getElementsByClassName( "leftBtn" );
     setArrowOnclick( leftBtns, 3 );
 
-    document.onkeyup = checkKey;
-
-    // document.getElementById( "utilitity" ).onclick = function() {
-    //     for( var i = 0; i < 9; i++ ) {
-    //         transDown();
-    //         transRight()
-    //     }
-    //         doWin();
-    // }
 };
+
+function isInView( element )
+{
+    const box = element.getBoundingClientRect();
+    console.log( `box top: ${box.top} window innerheight: ${window.innerHeight} box bottom: ${box.bottom} height: ${element.offsetHeight}` );
+    return box.top >= 1 && box.bottom <= window.innerHeight - 40;
+}
+
+const arrowDirection = {
+    "ArrowUp": 0,
+    "ArrowRight": 1,
+    "ArrowDown": 2,
+    "ArrowLeft": 3
+};
+
+window.addEventListener( 'keydown', ( e ) =>
+{
+    console.log( document.getElementById( "restart").offsetHeight );
+    if( e.target.localName != 'input' ) {   // if you need to filter <input> elements
+        const keyCode = e.code;
+        if( arrowDirection.hasOwnProperty( keyCode ) ) {
+            if( isInView( maze ) ) {
+                e.preventDefault();
+                moveMouse( arrowDirection[ keyCode ] );
+            }
+        }
+    }
+}, {
+    capture: true,   // this disables arrow key scrolling in modern Chrome
+    passive: false   // this is optional, my code works without it
+} );
 
 window.addEventListener( "resize", function() {
     location.reload();
