@@ -492,6 +492,7 @@ function moveMouse( direction, isRecurse )
             } else {
                 doLose();
             }
+            isNewMaze = false;
             return;
         }
 
@@ -595,6 +596,7 @@ function checkKey(e)
 
 var mouse;
 var maze;
+var isNewMaze = true;
 
 window.onload = function() 
 {
@@ -630,7 +632,6 @@ window.onload = function()
 function isInView( element )
 {
     const box = element.getBoundingClientRect();
-    console.log( `box top: ${box.top} window innerheight: ${window.innerHeight} box bottom: ${box.bottom} height: ${element.offsetHeight}` );
     return box.top >= 1 && box.bottom <= window.innerHeight - 40;
 }
 
@@ -647,7 +648,7 @@ window.addEventListener( 'keydown', ( e ) =>
     if( e.target.localName != 'input' ) {   // if you need to filter <input> elements
         const keyCode = e.code;
         if( arrowDirection.hasOwnProperty( keyCode ) ) {
-            if( isInView( maze ) ) {
+            if( isInView( maze ) && isNewMaze ) {
                 e.preventDefault();
                 moveMouse( arrowDirection[ keyCode ] );
             }
